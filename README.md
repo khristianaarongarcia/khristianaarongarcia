@@ -37,7 +37,7 @@ A professional single-page portfolio website showcasing my skills as a Full Stac
 
 ## 🚀 Live Demo
 
-Visit: [khristianaarongarcia.github.io](https://khristianaarongarcia.github.io)
+Visit: [khristianaarongarcia.github.io](https://khristianaarongarcia.netlify.io)
 
 ## 🛠️ Built With
 
