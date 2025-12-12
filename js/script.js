@@ -200,5 +200,51 @@ animationStyles.textContent = `
     .portfolio-item:nth-child(2) { transition-delay: 0.2s; }
     .portfolio-item:nth-child(3) { transition-delay: 0.3s; }
     .portfolio-item:nth-child(4) { transition-delay: 0.4s; }
+    .portfolio-item:nth-child(5) { transition-delay: 0.5s; }
 `;
 document.head.appendChild(animationStyles);
+
+// ===== PORTFOLIO MODAL =====
+const portfolioModal = document.getElementById('portfolio-modal');
+const modalIframe = document.getElementById('modal-iframe');
+const modalTitle = document.querySelector('.modal-title');
+const modalExternalLink = document.getElementById('modal-external-link');
+const modalClose = document.querySelector('.modal-close');
+const portfolioItems = document.querySelectorAll('.portfolio-item[data-url]');
+
+// Open modal when clicking a portfolio item
+portfolioItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const url = item.getAttribute('data-url');
+        const title = item.getAttribute('data-title');
+        
+        modalTitle.textContent = title;
+        modalIframe.src = url;
+        modalExternalLink.href = url;
+        portfolioModal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scroll
+    });
+});
+
+// Close modal
+function closeModal() {
+    portfolioModal.classList.remove('active');
+    modalIframe.src = ''; // Stop loading iframe
+    document.body.style.overflow = ''; // Restore scroll
+}
+
+modalClose.addEventListener('click', closeModal);
+
+// Close modal when clicking outside content
+portfolioModal.addEventListener('click', (e) => {
+    if (e.target === portfolioModal) {
+        closeModal();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && portfolioModal.classList.contains('active')) {
+        closeModal();
+    }
+});

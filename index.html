@@ -156,81 +156,105 @@
     <section id="portfolio" class="portfolio-section">
         <div class="container">
             <h2 class="section-title">My <span>Portfolio</span></h2>
-            <p class="section-subtitle">Click a category to view the live mockup</p>
+            <p class="section-subtitle">Click a category to see the live website mockup</p>
             
             <div class="portfolio-grid">
-                <!-- Restaurant -->
-                <a href="https://livekag-restaurant.netlify.app/" target="_blank" class="portfolio-item">
+                <!-- Restaurant Category -->
+                <div class="portfolio-item" data-url="https://livekag-restaurant.netlify.app/" data-title="Restaurant Website">
                     <div class="portfolio-img">
-                        <div class="live-preview-wrapper">
-                            <iframe src="https://livekag-restaurant.netlify.app/" loading="lazy" title="Restaurant Mockup"></iframe>
+                        <div class="iframe-thumbnail">
+                            <iframe src="https://livekag-restaurant.netlify.app/" loading="lazy" title="Restaurant Website Preview"></iframe>
                         </div>
                         <div class="portfolio-overlay">
                             <h4>Restaurant</h4>
-                            <p>Website Mockup</p>
-                            <span class="view-site"><i class="fas fa-external-link-alt"></i> View Live</span>
+                            <p>Web Development</p>
+                            <div class="portfolio-links">
+                                <span class="view-btn"><i class="fas fa-eye"></i> View Live</span>
+                            </div>
                         </div>
                     </div>
-                </a>
-
-                <!-- SaaS -->
-                <a href="https://livekag-saas.netlify.app/" target="_blank" class="portfolio-item">
+                </div>
+                
+                <!-- SaaS Category -->
+                <div class="portfolio-item" data-url="https://livekag-saas.netlify.app/" data-title="SaaS Website">
                     <div class="portfolio-img">
-                        <div class="live-preview-wrapper">
-                            <iframe src="https://livekag-saas.netlify.app/" loading="lazy" title="SaaS Mockup"></iframe>
+                        <div class="iframe-thumbnail">
+                            <iframe src="https://livekag-saas.netlify.app/" loading="lazy" title="SaaS Website Preview"></iframe>
                         </div>
                         <div class="portfolio-overlay">
                             <h4>SaaS</h4>
-                            <p>Website Mockup</p>
-                            <span class="view-site"><i class="fas fa-external-link-alt"></i> View Live</span>
+                            <p>Web Development</p>
+                            <div class="portfolio-links">
+                                <span class="view-btn"><i class="fas fa-eye"></i> View Live</span>
+                            </div>
                         </div>
                     </div>
-                </a>
-
-                <!-- Real Estate -->
-                <a href="https://livekag-realestate.netlify.app/" target="_blank" class="portfolio-item">
+                </div>
+                
+                <!-- Real Estate Category -->
+                <div class="portfolio-item" data-url="https://livekag-realestate.netlify.app/" data-title="Real Estate Website">
                     <div class="portfolio-img">
-                        <div class="live-preview-wrapper">
-                            <iframe src="https://livekag-realestate.netlify.app/" loading="lazy" title="Real Estate Mockup"></iframe>
+                        <div class="iframe-thumbnail">
+                            <iframe src="https://livekag-realestate.netlify.app/" loading="lazy" title="Real Estate Website Preview"></iframe>
                         </div>
                         <div class="portfolio-overlay">
                             <h4>Real Estate</h4>
-                            <p>Website Mockup</p>
-                            <span class="view-site"><i class="fas fa-external-link-alt"></i> View Live</span>
+                            <p>Web Development</p>
+                            <div class="portfolio-links">
+                                <span class="view-btn"><i class="fas fa-eye"></i> View Live</span>
+                            </div>
                         </div>
                     </div>
-                </a>
-
-                <!-- Photography -->
-                <a href="https://livekag-photography.netlify.app/" target="_blank" class="portfolio-item">
+                </div>
+                
+                <!-- Photography Category -->
+                <div class="portfolio-item" data-url="https://livekag-photography.netlify.app/" data-title="Photography Website">
                     <div class="portfolio-img">
-                        <div class="live-preview-wrapper">
-                            <iframe src="https://livekag-photography.netlify.app/" loading="lazy" title="Photography Mockup"></iframe>
+                        <div class="iframe-thumbnail">
+                            <iframe src="https://livekag-photography.netlify.app/" loading="lazy" title="Photography Website Preview"></iframe>
                         </div>
                         <div class="portfolio-overlay">
                             <h4>Photography</h4>
-                            <p>Website Mockup</p>
-                            <span class="view-site"><i class="fas fa-external-link-alt"></i> View Live</span>
+                            <p>Web Development</p>
+                            <div class="portfolio-links">
+                                <span class="view-btn"><i class="fas fa-eye"></i> View Live</span>
+                            </div>
                         </div>
                     </div>
-                </a>
-
-                <!-- Gym -->
-                <a href="https://livekag-gym.netlify.app/" target="_blank" class="portfolio-item">
+                </div>
+                
+                <!-- Gym Category -->
+                <div class="portfolio-item" data-url="https://livekag-gym.netlify.app/" data-title="Gym Website">
                     <div class="portfolio-img">
-                        <div class="live-preview-wrapper">
-                            <iframe src="https://livekag-gym.netlify.app/" loading="lazy" title="Gym Mockup"></iframe>
+                        <div class="iframe-thumbnail">
+                            <iframe src="https://livekag-gym.netlify.app/" loading="lazy" title="Gym Website Preview"></iframe>
                         </div>
                         <div class="portfolio-overlay">
                             <h4>Gym</h4>
-                            <p>Website Mockup</p>
-                            <span class="view-site"><i class="fas fa-external-link-alt"></i> View Live</span>
+                            <p>Web Development</p>
+                            <div class="portfolio-links">
+                                <span class="view-btn"><i class="fas fa-eye"></i> View Live</span>
+                            </div>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Portfolio Modal -->
+    <div id="portfolio-modal" class="portfolio-modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h3 class="modal-title">Website Preview</h3>
+            <div class="modal-iframe-wrapper">
+                <iframe id="modal-iframe" src="" title="Live Website Preview"></iframe>
+            </div>
+            <a id="modal-external-link" href="#" target="_blank" rel="noopener noreferrer" class="modal-external-btn">
+                <i class="fas fa-external-link-alt"></i> Open in New Tab
+            </a>
+        </div>
+    </div>
 
     <!-- Services Section -->
     <section id="services" class="services-section">
