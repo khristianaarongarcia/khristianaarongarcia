@@ -1,46 +1,45 @@
-# My Portfolio
+# Khristian Aaron Garcia | Portfolio
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-4ade80?style=for-the-badge)](https://khristianaarongarcia.github.io)
 
 A professional single-page portfolio website showcasing my skills as a Full Stack Developer.
 
-## Features
+## 🛠️ Tech Stack
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+
+## ✨ Features
 
 - Responsive single-page design
 - Smooth scrolling navigation
 - Typewriter animation effect
-- Interactive cards and hover effects
-- Contact form
+- Interactive portfolio with live iframe previews
+- Modal popups for project details
+- Contact form with Formspree integration
 - Mobile-friendly with hamburger menu
 
-## Sections
+## 📋 Sections
 
 - **Home** - Hero section with animated typewriter text
 - **About** - Personal introduction and skills
-- **Portfolio** - Project showcase
+- **Portfolio** - Live website mockups (Restaurant, SaaS, Real Estate, Photography, Gym)
 - **Services** - Web Development, Mobile Application, Full Stack Development
 - **Contact** - Contact form and social links
 
-## Deployment
+## 🚀 Live Demo
 
-### Local Development
+Visit: [khristianaarongarcia.github.io](https://khristianaarongarcia.github.io)
 
-1. Open the project folder
-2. Start a local server (Python, Node.js, or VS Code Live Server)
-3. Open `http://localhost:8000` in your browser
-
-### GitHub Pages Deployment
-
-1. Create a new repository on GitHub
-2. Push this code to the repository
-3. Go to Settings > Pages
-4. Select the main branch as the source
-5. Your site will be available at `https://yourusername.github.io/repository-name`
-
-## Adding Your Profile Image
-
-1. Add your black and white profile image to `assets/images/profile.png`
-2. The image will automatically be styled with grayscale filter
-
-## Technologies Used
+## 🛠️ Built With
 
 - HTML5
 - CSS3 (Custom Properties, Flexbox, Grid)
@@ -48,8 +47,12 @@ A professional single-page portfolio website showcasing my skills as a Full Stac
 - Font Awesome Icons
 - Google Fonts (Poppins)
 
-## Customization
+## 📬 Contact
 
-- Update colors in `css/style.css` (primary color: #4ade80)
-- Modify typewriter words in `js/script.js`
-- Update contact information in `index.html`
+- Email: khristianaaron.garcia@gmail.com
+- LinkedIn: [Khristian Aaron Garcia](https://www.linkedin.com/in/khristian-aaron-garcia-81b9b3278/)
+- GitHub: [@khristianaarongarcia](https://github.com/khristianaarongarcia)
+
+---
+
+© 2024 Khristian Aaron Garcia. All rights reserved.
