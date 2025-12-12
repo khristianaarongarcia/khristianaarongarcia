@@ -156,86 +156,54 @@
     <section id="portfolio" class="portfolio-section">
         <div class="container">
             <h2 class="section-title">My <span>Portfolio</span></h2>
-            <p class="section-subtitle">Click a category to see the live website mockup</p>
+            <p class="section-subtitle">Click a category to explore my work</p>
             
             <div class="portfolio-grid">
-                <!-- Restaurant Category -->
-                <div class="portfolio-item" data-url="https://livekag-restaurant.netlify.app/" data-title="Restaurant Website">
-                    <div class="portfolio-img">
-                        <div class="iframe-thumbnail">
-                            <iframe src="https://livekag-restaurant.netlify.app/" loading="lazy" title="Restaurant Website Preview"></iframe>
+                <!-- Web Development Category -->
+                <div class="portfolio-category" data-category="web-dev">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-code"></i>
                         </div>
-                        <div class="portfolio-overlay">
-                            <h4>Restaurant</h4>
-                            <p>Web Development</p>
-                            <div class="portfolio-links">
-                                <span class="view-btn"><i class="fas fa-eye"></i> View Live</span>
-                            </div>
-                        </div>
+                        <h4>Web Development</h4>
+                        <p>5 Projects</p>
+                        <span class="view-btn"><i class="fas fa-eye"></i> View Projects</span>
                     </div>
                 </div>
                 
-                <!-- SaaS Category -->
-                <div class="portfolio-item" data-url="https://livekag-saas.netlify.app/" data-title="SaaS Website">
-                    <div class="portfolio-img">
-                        <div class="iframe-thumbnail">
-                            <iframe src="https://livekag-saas.netlify.app/" loading="lazy" title="SaaS Website Preview"></iframe>
+                <!-- Full Stack Development Category -->
+                <div class="portfolio-category" data-category="fullstack">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-layer-group"></i>
                         </div>
-                        <div class="portfolio-overlay">
-                            <h4>SaaS</h4>
-                            <p>Web Development</p>
-                            <div class="portfolio-links">
-                                <span class="view-btn"><i class="fas fa-eye"></i> View Live</span>
-                            </div>
-                        </div>
+                        <h4>Full Stack Development</h4>
+                        <p>Coming Soon</p>
+                        <span class="view-btn"><i class="fas fa-eye"></i> View Projects</span>
                     </div>
                 </div>
                 
-                <!-- Real Estate Category -->
-                <div class="portfolio-item" data-url="https://livekag-realestate.netlify.app/" data-title="Real Estate Website">
-                    <div class="portfolio-img">
-                        <div class="iframe-thumbnail">
-                            <iframe src="https://livekag-realestate.netlify.app/" loading="lazy" title="Real Estate Website Preview"></iframe>
+                <!-- Mobile App Development Category -->
+                <div class="portfolio-category" data-category="mobile">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-mobile-alt"></i>
                         </div>
-                        <div class="portfolio-overlay">
-                            <h4>Real Estate</h4>
-                            <p>Web Development</p>
-                            <div class="portfolio-links">
-                                <span class="view-btn"><i class="fas fa-eye"></i> View Live</span>
-                            </div>
-                        </div>
+                        <h4>Mobile App Development</h4>
+                        <p>Coming Soon</p>
+                        <span class="view-btn"><i class="fas fa-eye"></i> View Projects</span>
                     </div>
                 </div>
                 
-                <!-- Photography Category -->
-                <div class="portfolio-item" data-url="https://livekag-photography.netlify.app/" data-title="Photography Website">
-                    <div class="portfolio-img">
-                        <div class="iframe-thumbnail">
-                            <iframe src="https://livekag-photography.netlify.app/" loading="lazy" title="Photography Website Preview"></iframe>
+                <!-- n8n Automation Category -->
+                <div class="portfolio-category" data-category="automation">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-robot"></i>
                         </div>
-                        <div class="portfolio-overlay">
-                            <h4>Photography</h4>
-                            <p>Web Development</p>
-                            <div class="portfolio-links">
-                                <span class="view-btn"><i class="fas fa-eye"></i> View Live</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Gym Category -->
-                <div class="portfolio-item" data-url="https://livekag-gym.netlify.app/" data-title="Gym Website">
-                    <div class="portfolio-img">
-                        <div class="iframe-thumbnail">
-                            <iframe src="https://livekag-gym.netlify.app/" loading="lazy" title="Gym Website Preview"></iframe>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <h4>Gym</h4>
-                            <p>Web Development</p>
-                            <div class="portfolio-links">
-                                <span class="view-btn"><i class="fas fa-eye"></i> View Live</span>
-                            </div>
-                        </div>
+                        <h4>n8n Automation</h4>
+                        <p>Coming Soon</p>
+                        <span class="view-btn"><i class="fas fa-eye"></i> View Projects</span>
                     </div>
                 </div>
             </div>
@@ -244,15 +212,81 @@
 
     <!-- Portfolio Modal -->
     <div id="portfolio-modal" class="portfolio-modal">
-        <div class="modal-content">
+        <div class="modal-content modal-content-large">
             <button class="modal-close" aria-label="Close modal">&times;</button>
-            <h3 class="modal-title">Website Preview</h3>
-            <div class="modal-iframe-wrapper">
-                <iframe id="modal-iframe" src="" title="Live Website Preview"></iframe>
+            <h3 class="modal-title">Web Development Projects</h3>
+            
+            <!-- Projects Grid (for categories with multiple projects) -->
+            <div id="projects-grid" class="projects-grid">
+                <!-- Web Development Projects -->
+                <div class="project-card" data-url="https://livekag-restaurant.netlify.app/" data-title="Restaurant Website">
+                    <div class="project-thumbnail">
+                        <iframe src="https://livekag-restaurant.netlify.app/" loading="lazy" title="Restaurant"></iframe>
+                    </div>
+                    <div class="project-info">
+                        <h5>Restaurant Website</h5>
+                        <span class="project-view-btn"><i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-url="https://livekag-saas.netlify.app/" data-title="SaaS Website">
+                    <div class="project-thumbnail">
+                        <iframe src="https://livekag-saas.netlify.app/" loading="lazy" title="SaaS"></iframe>
+                    </div>
+                    <div class="project-info">
+                        <h5>SaaS Website</h5>
+                        <span class="project-view-btn"><i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-url="https://livekag-realestate.netlify.app/" data-title="Real Estate Website">
+                    <div class="project-thumbnail">
+                        <iframe src="https://livekag-realestate.netlify.app/" loading="lazy" title="Real Estate"></iframe>
+                    </div>
+                    <div class="project-info">
+                        <h5>Real Estate Website</h5>
+                        <span class="project-view-btn"><i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-url="https://livekag-photography.netlify.app/" data-title="Photography Website">
+                    <div class="project-thumbnail">
+                        <iframe src="https://livekag-photography.netlify.app/" loading="lazy" title="Photography"></iframe>
+                    </div>
+                    <div class="project-info">
+                        <h5>Photography Website</h5>
+                        <span class="project-view-btn"><i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-url="https://livekag-gym.netlify.app/" data-title="Gym Website">
+                    <div class="project-thumbnail">
+                        <iframe src="https://livekag-gym.netlify.app/" loading="lazy" title="Gym"></iframe>
+                    </div>
+                    <div class="project-info">
+                        <h5>Gym Website</h5>
+                        <span class="project-view-btn"><i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </div>
             </div>
-            <a id="modal-external-link" href="#" target="_blank" rel="noopener noreferrer" class="modal-external-btn">
-                <i class="fas fa-external-link-alt"></i> Open in New Tab
-            </a>
+            
+            <!-- Coming Soon Message -->
+            <div id="coming-soon" class="coming-soon" style="display: none;">
+                <i class="fas fa-tools"></i>
+                <h4>Coming Soon</h4>
+                <p>Projects for this category are currently in development. Check back soon!</p>
+            </div>
+            
+            <!-- Single Project Preview -->
+            <div id="single-project-view" class="single-project-view" style="display: none;">
+                <button class="back-to-grid"><i class="fas fa-arrow-left"></i> Back to Projects</button>
+                <div class="modal-iframe-wrapper">
+                    <iframe id="modal-iframe" src="" title="Live Website Preview"></iframe>
+                </div>
+                <a id="modal-external-link" href="#" target="_blank" rel="noopener noreferrer" class="modal-external-btn">
+                    <i class="fas fa-external-link-alt"></i> Open in New Tab
+                </a>
+            </div>
         </div>
     </div>
 

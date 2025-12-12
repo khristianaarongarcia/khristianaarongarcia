@@ -169,20 +169,20 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements for animation
-document.querySelectorAll('.value-card, .service-card, .portfolio-item, .skill-item').forEach(el => {
+document.querySelectorAll('.value-card, .service-card, .portfolio-category, .skill-item').forEach(el => {
     observer.observe(el);
 });
 
 // Add animation styles dynamically
 const animationStyles = document.createElement('style');
 animationStyles.textContent = `
-    .value-card, .service-card, .portfolio-item, .skill-item {
+    .value-card, .service-card, .portfolio-category, .skill-item {
         opacity: 0;
         transform: translateY(30px);
         transition: opacity 0.6s ease, transform 0.6s ease;
     }
     
-    .value-card.animate, .service-card.animate, .portfolio-item.animate, .skill-item.animate {
+    .value-card.animate, .service-card.animate, .portfolio-category.animate, .skill-item.animate {
         opacity: 1;
         transform: translateY(0);
     }
@@ -196,11 +196,10 @@ animationStyles.textContent = `
     .service-card:nth-child(2) { transition-delay: 0.2s; }
     .service-card:nth-child(3) { transition-delay: 0.3s; }
     
-    .portfolio-item:nth-child(1) { transition-delay: 0.1s; }
-    .portfolio-item:nth-child(2) { transition-delay: 0.2s; }
-    .portfolio-item:nth-child(3) { transition-delay: 0.3s; }
-    .portfolio-item:nth-child(4) { transition-delay: 0.4s; }
-    .portfolio-item:nth-child(5) { transition-delay: 0.5s; }
+    .portfolio-category:nth-child(1) { transition-delay: 0.1s; }
+    .portfolio-category:nth-child(2) { transition-delay: 0.2s; }
+    .portfolio-category:nth-child(3) { transition-delay: 0.3s; }
+    .portfolio-category:nth-child(4) { transition-delay: 0.4s; }
 `;
 document.head.appendChild(animationStyles);
 
@@ -210,20 +209,71 @@ const modalIframe = document.getElementById('modal-iframe');
 const modalTitle = document.querySelector('.modal-title');
 const modalExternalLink = document.getElementById('modal-external-link');
 const modalClose = document.querySelector('.modal-close');
-const portfolioItems = document.querySelectorAll('.portfolio-item[data-url]');
+const projectsGrid = document.getElementById('projects-grid');
+const comingSoon = document.getElementById('coming-soon');
+const singleProjectView = document.getElementById('single-project-view');
+const backToGridBtn = document.querySelector('.back-to-grid');
 
-// Open modal when clicking a portfolio item
-portfolioItems.forEach(item => {
-    item.addEventListener('click', () => {
-        const url = item.getAttribute('data-url');
-        const title = item.getAttribute('data-title');
+// Category data
+const categoryTitles = {
+    'web-dev': 'Web Development Projects',
+    'fullstack': 'Full Stack Development Projects',
+    'mobile': 'Mobile App Development Projects',
+    'automation': 'n8n Automation Projects'
+};
+
+const categoryHasProjects = {
+    'web-dev': true,
+    'fullstack': false,
+    'mobile': false,
+    'automation': false
+};
+
+// Open modal when clicking a category
+document.querySelectorAll('.portfolio-category').forEach(category => {
+    category.addEventListener('click', () => {
+        const categoryType = category.getAttribute('data-category');
+        
+        modalTitle.textContent = categoryTitles[categoryType];
+        
+        // Show projects grid or coming soon based on category
+        if (categoryHasProjects[categoryType]) {
+            projectsGrid.style.display = 'grid';
+            comingSoon.style.display = 'none';
+        } else {
+            projectsGrid.style.display = 'none';
+            comingSoon.style.display = 'block';
+        }
+        
+        // Always hide single project view initially
+        singleProjectView.style.display = 'none';
+        
+        portfolioModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+// Open single project view when clicking a project card
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const url = card.getAttribute('data-url');
+        const title = card.getAttribute('data-title');
         
         modalTitle.textContent = title;
         modalIframe.src = url;
         modalExternalLink.href = url;
-        portfolioModal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent background scroll
+        
+        projectsGrid.style.display = 'none';
+        singleProjectView.style.display = 'flex';
     });
+});
+
+// Back to projects grid
+backToGridBtn.addEventListener('click', () => {
+    modalIframe.src = ''; // Stop loading
+    singleProjectView.style.display = 'none';
+    projectsGrid.style.display = 'grid';
+    modalTitle.textContent = 'Web Development Projects';
 });
 
 // Close modal
@@ -231,6 +281,12 @@ function closeModal() {
     portfolioModal.classList.remove('active');
     modalIframe.src = ''; // Stop loading iframe
     document.body.style.overflow = ''; // Restore scroll
+    
+    // Reset views
+    setTimeout(() => {
+        singleProjectView.style.display = 'none';
+        projectsGrid.style.display = 'grid';
+    }, 300);
 }
 
 modalClose.addEventListener('click', closeModal);
