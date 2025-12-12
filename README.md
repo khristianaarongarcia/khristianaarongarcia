@@ -1,6 +1,6 @@
 # Khristian Aaron Garcia | Portfolio
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-Live-4ade80?style=for-the-badge)](https://khristianaarongarcia.github.io)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-4ade80?style=for-the-badge)](https://khristianaarongarcia.netlify.io)
 
 A professional single-page portfolio website showcasing my skills as a Full Stack Developer.
 
@@ -37,7 +37,7 @@ A professional single-page portfolio website showcasing my skills as a Full Stac
 
 ## 🚀 Live Demo
 
-Visit: [khristianaarongarcia.github.io](https://khristianaarongarcia.netlify.io)
+Visit: [khristianaarongarcia.netlify.io](https://khristianaarongarcia.netlify.io)
 
 ## 🛠️ Built With
 
