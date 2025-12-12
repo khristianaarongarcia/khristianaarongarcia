@@ -213,10 +213,17 @@ const modalIframe = document.getElementById('modal-iframe');
 const modalTitle = document.querySelector('.modal-title');
 const modalExternalLink = document.getElementById('modal-external-link');
 const modalClose = document.querySelector('.modal-close');
-const projectsGrid = document.getElementById('projects-grid');
 const comingSoon = document.getElementById('coming-soon');
 const singleProjectView = document.getElementById('single-project-view');
 const backToGridBtn = document.querySelector('.back-to-grid');
+
+// Category grids
+const categoryGrids = {
+    'web-dev': document.getElementById('projects-grid'),
+    'fullstack': document.getElementById('fullstack-grid'),
+    'mobile': document.getElementById('mobile-grid'),
+    'automation': document.getElementById('automation-grid')
+};
 
 // Category data
 const categoryTitles = {
@@ -228,29 +235,39 @@ const categoryTitles = {
 
 const categoryHasProjects = {
     'web-dev': true,
-    'fullstack': false,
+    'fullstack': true,
     'mobile': false,
     'automation': false
 };
+
+let currentCategory = 'web-dev';
+
+// Hide all category grids
+function hideAllGrids() {
+    Object.values(categoryGrids).forEach(grid => {
+        if (grid) grid.style.display = 'none';
+    });
+}
 
 // Open modal when clicking a category
 document.querySelectorAll('.portfolio-category').forEach(category => {
     category.addEventListener('click', () => {
         const categoryType = category.getAttribute('data-category');
+        currentCategory = categoryType;
         
         modalTitle.textContent = categoryTitles[categoryType];
         
-        // Show projects grid or coming soon based on category
-        if (categoryHasProjects[categoryType]) {
-            projectsGrid.style.display = 'grid';
-            comingSoon.style.display = 'none';
+        // Hide all grids first
+        hideAllGrids();
+        comingSoon.style.display = 'none';
+        singleProjectView.style.display = 'none';
+        
+        // Show the appropriate grid or coming soon
+        if (categoryHasProjects[categoryType] && categoryGrids[categoryType]) {
+            categoryGrids[categoryType].style.display = 'grid';
         } else {
-            projectsGrid.style.display = 'none';
             comingSoon.style.display = 'block';
         }
-        
-        // Always hide single project view initially
-        singleProjectView.style.display = 'none';
         
         portfolioModal.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -278,7 +295,7 @@ document.querySelectorAll('.project-card').forEach(card => {
         modalIframe.src = url;
         modalExternalLink.href = url;
         
-        projectsGrid.style.display = 'none';
+        hideAllGrids();
         singleProjectView.style.display = 'flex';
     });
 });
@@ -287,8 +304,12 @@ document.querySelectorAll('.project-card').forEach(card => {
 backToGridBtn.addEventListener('click', () => {
     modalIframe.src = ''; // Stop loading
     singleProjectView.style.display = 'none';
-    projectsGrid.style.display = 'grid';
-    modalTitle.textContent = 'Web Development Projects';
+    
+    // Show the current category's grid
+    if (categoryGrids[currentCategory]) {
+        categoryGrids[currentCategory].style.display = 'grid';
+    }
+    modalTitle.textContent = categoryTitles[currentCategory];
 });
 
 // Close modal
@@ -300,7 +321,7 @@ function closeModal() {
     // Reset views
     setTimeout(() => {
         singleProjectView.style.display = 'none';
-        projectsGrid.style.display = 'grid';
+        hideAllGrids();
     }, 300);
 }
 
