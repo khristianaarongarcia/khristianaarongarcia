@@ -255,8 +255,19 @@ document.querySelectorAll('.portfolio-category').forEach(category => {
 
 // Open single project view when clicking a project card
 document.querySelectorAll('.project-card').forEach(card => {
+    const url = card.getAttribute('data-url');
+    
+    // Make the small external link button open URL directly
+    const externalBtn = card.querySelector('.project-view-btn');
+    if (externalBtn) {
+        externalBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent card click
+            window.open(url, '_blank', 'noopener,noreferrer');
+        });
+    }
+    
+    // Clicking the card opens single project view
     card.addEventListener('click', () => {
-        const url = card.getAttribute('data-url');
         const title = card.getAttribute('data-title');
         
         modalTitle.textContent = title;
