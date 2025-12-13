@@ -624,11 +624,11 @@ ul {
 }
 
 .project-thumbnail iframe {
-    width: 1440px;
-    height: 900px;
+    width: 1600px;
+    height: 1000px;
     border: none;
-    transform: scale(0.28);
     transform-origin: top left;
+    transform: scale(0.35);
     pointer-events: none;
     position: absolute;
     top: 0;
@@ -1085,11 +1085,11 @@ ul {
     }
     
     .project-thumbnail {
-        height: 220px;
+        height: 250px;
     }
     
     .project-thumbnail iframe {
-        transform: scale(0.45);
+        transform: scale(0.5);
     }
 
     .services-grid {
