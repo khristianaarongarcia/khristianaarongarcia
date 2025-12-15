@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <title>KAG Logo</title>
+  <title>KAG</title>
   
-  <!-- Background -->
+  <!-- Solid background -->
   <rect x="0" y="0" width="512" height="512" fill="#0a0a0a"/>
   
-  <!-- Gradient Background Circle -->
-  <circle cx="256" cy="256" r="240" fill="#1a1a2e"/>
+  <!-- Elegant circle background -->
+  <circle cx="256" cy="256" r="235" fill="#111827"/>
   
-  <!-- Decorative accent ring -->
-  <circle cx="256" cy="256" r="200" fill="none" stroke="#4ade80" stroke-width="3" stroke-opacity="0.2"/>
+  <!-- Thin premium border -->
+  <circle cx="256" cy="256" r="235" fill="none" stroke="#4ade80" stroke-width="4"/>
+  <circle cx="256" cy="256" r="225" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.1"/>
   
-  <!-- Letter K -->
-  <path d="M100 160 L100 352 L130 352 L130 270 L200 352 L240 352 L160 260 L235 160 L195 160 L130 250 L130 160 Z" fill="#ffffff"/>
+  <!-- Centered KAG monogram - professional typography -->
+  <!-- K -->
+  <path d="M100 165 L100 350 L128 350 L128 268 L180 350 L215 350 L152 256 L210 165 L175 165 L128 244 L128 165 Z" fill="#ffffff"/>
   
-  <!-- Letter A -->
-  <path d="M230 352 L270 160 L300 160 L340 352 L310 352 L300 310 L270 310 L260 352 Z M275 280 L295 280 L285 230 Z" fill="#ffffff"/>
+  <!-- A -->
+  <path d="M225 350 L263 165 L283 165 L321 350 L293 350 L285 315 L261 315 L253 350 Z" fill="#ffffff"/>
+  <path d="M266 290 L280 290 L273 255 Z" fill="#111827"/>
   
-  <!-- Letter G -->
-  <path d="M360 256 C360 200 395 160 440 160 C465 160 485 172 495 190 L470 210 C462 198 452 190 440 190 C415 190 395 215 395 256 C395 297 415 322 440 322 C455 322 465 315 470 305 L470 275 L435 275 L435 250 L500 250 L500 320 C485 340 465 352 440 352 C395 352 360 312 360 256 Z" fill="#ffffff"/>
+  <!-- G -->
+  <path d="M340 257 C340 198 372 165 415 165 C442 165 462 180 472 200 L447 218 C440 205 428 195 415 195 C388 195 372 220 372 257 C372 294 388 320 415 320 C428 320 438 312 443 298 L443 272 L410 272 L410 247 L470 247 L470 315 C457 340 438 355 415 355 C372 355 340 315 340 257 Z" fill="#ffffff"/>
   
-  <!-- Green Dot accent -->
-  <circle cx="420" cy="380" r="22" fill="#4ade80"/>
+  <!-- Professional green accent dot -->
+  <circle cx="415" cy="385" r="18" fill="#4ade80"/>
   
 </svg>

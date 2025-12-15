@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <title>KAG Logo</title>
+  <title>KAG</title>
   
-  <!-- Background Circle -->
-  <circle cx="256" cy="256" r="256" fill="#0a0a0a"/>
+  <!-- Solid dark background -->
+  <rect x="0" y="0" width="512" height="512" fill="#0f172a"/>
   
-  <!-- Inner gradient circle for depth -->
-  <circle cx="256" cy="256" r="240" fill="#1a1a2e"/>
+  <!-- K - Centered -->
+  <polygon points="70,175 105,175 105,245 170,175 215,175 135,262 220,350 172,350 105,278 105,350 70,350" fill="#ffffff"/>
   
-  <!-- Subtle ring accent -->
-  <circle cx="256" cy="256" r="220" fill="none" stroke="#4ade80" stroke-width="2" stroke-opacity="0.3"/>
+  <!-- A - Centered -->
+  <polygon points="220,350 262,175 285,175 327,350 292,350 282,305 265,305 255,350" fill="#ffffff"/>
+  <polygon points="270,275 277,275 273.5,248" fill="#0f172a"/>
   
-  <!-- KAG Text -->
-  <text x="256" y="280" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="140" fill="#ffffff">KAG</text>
+  <!-- G - Centered -->
+  <path d="M345 262 C345 200 378 175 420 175 C448 175 468 188 478 210 L450 228 C444 216 433 205 420 205 C392 205 378 230 378 262 C378 294 392 320 420 320 C433 320 442 312 448 300 L448 275 L415 275 L415 250 L478 250 L478 315 C465 340 445 355 420 355 C378 355 345 320 345 262 Z" fill="#ffffff"/>
   
-  <!-- Green Dot -->
-  <circle cx="420" cy="280" r="18" fill="#4ade80"/>
+  <!-- Green dot -->
+  <circle cx="442" cy="350" r="18" fill="#4ade80"/>
   
 </svg>
