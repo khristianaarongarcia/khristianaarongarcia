@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>KAG Logo</title>
+  
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="256" fill="#0a0a0a"/>
+  
+  <!-- Inner gradient circle for depth -->
+  <circle cx="256" cy="256" r="240" fill="#1a1a2e"/>
+  
+  <!-- Subtle ring accent -->
+  <circle cx="256" cy="256" r="220" fill="none" stroke="#4ade80" stroke-width="2" stroke-opacity="0.3"/>
+  
+  <!-- KAG Text -->
+  <text x="256" y="280" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="140" fill="#ffffff">KAG</text>
+  
+  <!-- Green Dot -->
+  <circle cx="420" cy="280" r="18" fill="#4ade80"/>
+  
+</svg>

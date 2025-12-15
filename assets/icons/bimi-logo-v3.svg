@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>KAG Logo</title>
+  
+  <!-- Solid dark background -->
+  <rect x="0" y="0" width="512" height="512" fill="#0a0a0a"/>
+  
+  <!-- Main circle background with gradient effect using stacked circles -->
+  <circle cx="256" cy="256" r="250" fill="#16213e"/>
+  <circle cx="256" cy="256" r="230" fill="#1a1a2e"/>
+  
+  <!-- Green accent border -->
+  <circle cx="256" cy="256" r="245" fill="none" stroke="#4ade80" stroke-width="4"/>
+  
+  <!-- K letter -->
+  <polygon points="95,150 130,150 130,240 185,150 225,150 155,255 230,360 190,360 130,270 130,360 95,360" fill="#ffffff"/>
+  
+  <!-- A letter -->
+  <polygon points="255,360 220,360 275,150 305,150 360,360 325,360 310,305 270,305" fill="#ffffff"/>
+  <polygon points="278,195 290,260 300,260 288,195" fill="#1a1a2e"/>
+  
+  <!-- G letter -->
+  <path d="M380,255 C380,195 410,150 455,150 L455,150 C480,150 500,165 510,185 L510,185 L480,205 C475,195 465,185 455,185 L455,185 C425,185 410,215 410,255 L410,255 C410,295 425,325 455,325 L455,325 C465,325 475,320 480,310 L480,310 L480,275 L450,275 L450,245 L510,245 L510,330 C495,350 475,365 455,365 L455,365 C410,365 380,315 380,255 L380,255 Z" fill="#ffffff"/>
+  
+  <!-- Green dot (signature element) -->
+  <circle cx="440" cy="400" r="25" fill="#4ade80"/>
+  
+</svg>

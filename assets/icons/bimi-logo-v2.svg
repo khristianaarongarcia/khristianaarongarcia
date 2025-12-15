@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>KAG Logo</title>
+  
+  <!-- Background -->
+  <rect x="0" y="0" width="512" height="512" fill="#0a0a0a"/>
+  
+  <!-- Gradient Background Circle -->
+  <circle cx="256" cy="256" r="240" fill="#1a1a2e"/>
+  
+  <!-- Decorative accent ring -->
+  <circle cx="256" cy="256" r="200" fill="none" stroke="#4ade80" stroke-width="3" stroke-opacity="0.2"/>
+  
+  <!-- Letter K -->
+  <path d="M100 160 L100 352 L130 352 L130 270 L200 352 L240 352 L160 260 L235 160 L195 160 L130 250 L130 160 Z" fill="#ffffff"/>
+  
+  <!-- Letter A -->
+  <path d="M230 352 L270 160 L300 160 L340 352 L310 352 L300 310 L270 310 L260 352 Z M275 280 L295 280 L285 230 Z" fill="#ffffff"/>
+  
+  <!-- Letter G -->
+  <path d="M360 256 C360 200 395 160 440 160 C465 160 485 172 495 190 L470 210 C462 198 452 190 440 190 C415 190 395 215 395 256 C395 297 415 322 440 322 C455 322 465 315 470 305 L470 275 L435 275 L435 250 L500 250 L500 320 C485 340 465 352 440 352 C395 352 360 312 360 256 Z" fill="#ffffff"/>
+  
+  <!-- Green Dot accent -->
+  <circle cx="420" cy="380" r="22" fill="#4ade80"/>
+  
+</svg>
